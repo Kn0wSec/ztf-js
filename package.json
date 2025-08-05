@@ -1,0 +1,50 @@
+{
+  "name": "ztf-js",
+  "version": "1.0.0",
+  "description": "Zero-Trust Framework for JavaScript full-stack applications",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "bootstrap": "lerna bootstrap",
+    "build": "lerna run build",
+    "test": "lerna run test",
+    "test:integration": "jest --config=jest.integration.config.js",
+    "test:security": "npm run test:integration -- --testPathPattern=security",
+    "benchmark": "node benchmarks/run-benchmarks.js",
+    "lint": "eslint packages/*/src/**/*.ts",
+    "clean": "lerna clean && lerna run clean",
+    "publish": "lerna publish"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "eslint": "^8.0.0",
+    "jest": "^29.0.0",
+    "lerna": "^7.0.0",
+    "typescript": "^5.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ztf-js/framework.git"
+  },
+  "keywords": [
+    "zero-trust",
+    "security",
+    "javascript",
+    "mern",
+    "nextjs",
+    "nestjs",
+    "middleware",
+    "authentication",
+    "authorization"
+  ],
+  "author": "Kn0wSec",
+  "license": "MIT"
+}
