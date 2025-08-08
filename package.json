@@ -8,9 +8,11 @@
     "dev": "nodemon src/index.js",
     "test": "jest",
     "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
     "lint": "eslint src/",
     "build": "webpack --mode production",
-    "docs": "jsdoc -c jsdoc.json"
+    "docs": "jsdoc -c jsdoc.json",
+    "cli": "node bin/ztf-cli.js"
   },
   "keywords": [
     "zero-trust",
@@ -44,7 +46,8 @@
     "qrcode": "^1.5.3",
     "speakeasy": "^2.0.0",
     "redis": "^4.6.8",
-    "ioredis": "^5.3.2"
+    "ioredis": "^5.3.2",
+    "commander": "^11.1.0"
   },
   "devDependencies": {
     "nodemon": "^3.0.1",
@@ -54,6 +57,9 @@
     "webpack-cli": "^5.1.4",
     "jsdoc": "^4.0.2",
     "supertest": "^6.3.3"
+  },
+  "bin": {
+    "ztf": "./bin/ztf-cli.js"
   },
   "engines": {
     "node": ">=16.0.0"
